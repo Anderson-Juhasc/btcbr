@@ -17,7 +17,7 @@
             <div id="average" class="rate">
                 <!-- .rate__cell -->
                 <div class="rate__cell">
-                    <input id="btc-value" value="1" type="text" class="rate__input" />
+                    <input id="btc-value" value="1.00000000" type="text" class="rate__input" onClick="this.setSelectionRange(0, this.value.length)" />
                     BTC
                 </div>
                 <!-- /.rate__cell -->
@@ -30,7 +30,7 @@
 
                 <!-- .rate__cell -->
                 <div class="rate__cell">
-                    <input id="brl-value" value="<?php echo $AVG; ?>" data-val="<?php echo $AVG; ?>" type="text" class="rate__input" />
+                    <input id="brl-value" value="<?php echo $AVG; ?>" data-val="<?php echo $AVG; ?>" type="text" class="rate__input" onClick="this.setSelectionRange(0, this.value.length)" />
                     BRL
                 </div>
                 <!-- /.rate__cell -->
