@@ -12,12 +12,12 @@
     <div class="main">
         <!-- .main__cell -->
         <div class="main__cell">
-            <h2 class="main__title">Média do Mercado</h2>
+            <h2 class="main__title">Média</h2>
             <!-- .rate -->
             <div id="average" class="rate">
                 <!-- .rate__cell -->
                 <div class="rate__cell">
-                    <input id="btc-value" value="1.00000000" type="text" class="rate__input" onClick="this.setSelectionRange(0, this.value.length)" />
+                    <input value="1.00000000" type="text" class="btc-value rate__input" onClick="this.setSelectionRange(0, this.value.length)" />
                     BTC
                 </div>
                 <!-- /.rate__cell -->
@@ -30,7 +30,7 @@
 
                 <!-- .rate__cell -->
                 <div class="rate__cell">
-                    <input id="brl-value" value="<?php echo $AVG; ?>" data-val="<?php echo $AVG; ?>" type="text" class="rate__input" onClick="this.setSelectionRange(0, this.value.length)" />
+                    <input value="<?php echo $AVG; ?>" data-val="<?php echo $AVG; ?>" type="text" class="brl-value rate__input" onClick="this.setSelectionRange(0, this.value.length)" />
                     BRL
                 </div>
                 <!-- /.rate__cell -->
@@ -39,10 +39,97 @@
         </div>
         <!-- /.main__cell -->
 
-        <p><strong>Referência:</strong> BitcoinToYou, FoxBit e MercadoBitcoin</p>
-        <p><strong>Patrocine esse Projeto:</strong> 1Pg3up9SJYhYTH68CmhqLxTdADjbPhJv8Z</p>
+        <!-- .main__cell -->
+        <div class="main__cell">
+            <h2 class="main__title">BitcoinToYou</h2>
+            <!-- .rate -->
+            <div id="" class="rate">
+                <!-- .rate__cell -->
+                <div class="rate__cell">
+                    <input value="1.00000000" type="text" class="btc-value rate__input" onClick="this.setSelectionRange(0, this.value.length)" />
+                    BTC
+                </div>
+                <!-- /.rate__cell -->
+
+                <!-- .rate__cell -->
+                <div class="rate__cell">
+                    =
+                </div>
+                <!-- /.rate__cell -->
+
+                <!-- .rate__cell -->
+                <div class="rate__cell">
+                    <input value="<?php echo $BTY; ?>" data-val="<?php echo $BTY; ?>" type="text" class="brl-value rate__input" onClick="this.setSelectionRange(0, this.value.length)" />
+                    BRL
+                </div>
+                <!-- /.rate__cell -->
+            </div>
+            <!-- /.rate -->
+        </div>
+        <!-- /.main__cell -->
+
+        <!-- .main__cell -->
+        <div class="main__cell">
+            <h2 class="main__title">FoxBit</h2>
+            <!-- .rate -->
+            <div id="" class="rate">
+                <!-- .rate__cell -->
+                <div class="rate__cell">
+                    <input value="1.00000000" type="text" class="btc-value rate__input" onClick="this.setSelectionRange(0, this.value.length)" />
+                    BTC
+                </div>
+                <!-- /.rate__cell -->
+
+                <!-- .rate__cell -->
+                <div class="rate__cell">
+                    =
+                </div>
+                <!-- /.rate__cell -->
+
+                <!-- .rate__cell -->
+                <div class="rate__cell">
+                    <input value="<?php echo $FOX; ?>" data-val="<?php echo $FOX; ?>" type="text" class="brl-value rate__input" onClick="this.setSelectionRange(0, this.value.length)" />
+                    BRL
+                </div>
+                <!-- /.rate__cell -->
+            </div>
+            <!-- /.rate -->
+        </div>
+        <!-- /.main__cell -->
+
+        <!-- .main__cell -->
+        <div class="main__cell">
+            <h2 class="main__title">MercadoBitcoin</h2>
+            <!-- .rate -->
+            <div id="" class="rate">
+                <!-- .rate__cell -->
+                <div class="rate__cell">
+                    <input value="1.00000000" type="text" class="btc-value rate__input" onClick="this.setSelectionRange(0, this.value.length)" />
+                    BTC
+                </div>
+                <!-- /.rate__cell -->
+
+                <!-- .rate__cell -->
+                <div class="rate__cell">
+                    =
+                </div>
+                <!-- /.rate__cell -->
+
+                <!-- .rate__cell -->
+                <div class="rate__cell">
+                    <input value="<?php echo $MB; ?>" data-val="<?php echo $MB; ?>" type="text" class="brl-value rate__input" onClick="this.setSelectionRange(0, this.value.length)" />
+                    BRL
+                </div>
+                <!-- /.rate__cell -->
+            </div>
+            <!-- /.rate -->
+        </div>
+        <!-- /.main__cell -->
     </div>
     <!-- /.main -->
+
+    <p><strong>Referência:</strong> BitcoinToYou, FoxBit e MercadoBitcoin</p>
+    <p><strong>Patrocine esse Projeto:</strong> 1Pg3up9SJYhYTH68CmhqLxTdADjbPhJv8Z</p>
 </div>
 <!-- /.wrapper -->
 
