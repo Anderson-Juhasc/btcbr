@@ -38,6 +38,9 @@
             <!-- /.rate -->
         </div>
         <!-- /.main__cell -->
+
+        <p><strong>Referência:</strong> BitcoinToYou, FoxBit e MercadoBitcoin</p>
+        <p><strong>Patrocine esse Projeto:</strong> 1Pg3up9SJYhYTH68CmhqLxTdADjbPhJv8Z</p>
     </div>
     <!-- /.main -->
 </div>
