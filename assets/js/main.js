@@ -1,18 +1,4 @@
 $(document).ready(function() {
-    var btcField = $(".btc-value");
-    var brlField = $(".brl-value");
-
-    //brlField.currency({
-    //    region: "BRL", // The 3 digit ISO code you want to display your currency in
-    //    thousands: ".", // Thousands separator
-    //    decimal: ",",   // Decimal separator
-    //    decimals: 2, // How many decimals to show
-    //    hidePrefix: true, // Hide any prefix
-    //    hidePostfix: false, // Hide any postfix
-    //    convertFrom: "", // If converting, the 3 digit ISO code you want to convert from,
-    //    convertLoading: "(Converting...)", // Loading message appended to values while converting
-    //});
-
     $(".btc-value").on("keyup", function(e) {
         var result = ($(this).val()).replace(",", ".") * $(this).parents('.rate').find(".brl-value").data("val");
 
@@ -22,6 +8,16 @@ $(document).ready(function() {
     $(".brl-value").on("keyup", function(e) {
         var result = ($(this).val()).replace(",", ".") / $(this).data("val");
 
-        $(this).parents('.rate').find(".btc-value").val(result.toFixed(8));
+        $(this).parents('.rate').find(".btc-value").val(result.toFixed(8).trim(0));
     });
+
+
+    //setInterval(function() {
+    //    $.getJSON("ajax.php", function(data) {
+    //        $("#average").find(".brl-value").data("val", data.avg).val(data.avg);
+    //        $("#bitcointoyou").find(".brl-value").data("val", data.bty).val(data.bty);
+    //        $("#foxbit").find(".brl-value").data("val", data.fox).val(data.fox);
+    //        $("#localbitcoins").find(".brl-value").data("val", data.lb).val(data.lb);
+    //    });
+    //}, 5000)
 });

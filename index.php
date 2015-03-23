@@ -12,7 +12,11 @@
     <div class="main">
         <!-- .main__cell -->
         <div class="main__cell">
-            <h2 class="main__title">Média</h2>
+            <h2 class="main__title">
+                <!--input id="" name="" type="checkbox" /-->
+                Média
+            </h2>
+
             <!-- .rate -->
             <div id="average" class="rate">
                 <!-- .rate__cell -->
@@ -30,7 +34,7 @@
 
                 <!-- .rate__cell -->
                 <div class="rate__cell">
-                    <input value="<?php echo $AVG; ?>" data-val="<?php echo $AVG; ?>" type="text" class="brl-value rate__input" onClick="this.setSelectionRange(0, this.value.length)" />
+                <input value="<?php echo $AVG; ?>" data-val="<?php echo $AVG; ?>" type="text" class="brl-value rate__input" onClick="this.setSelectionRange(0, this.value.length)" />
                     BRL
                 </div>
                 <!-- /.rate__cell -->
@@ -41,9 +45,13 @@
 
         <!-- .main__cell -->
         <div class="main__cell">
-            <h2 class="main__title">BitcoinToYou</h2>
+            <h2 class="main__title">
+                <!--input id="" name="" type="checkbox" /-->
+                BitcoinToYou
+            </h2>
+
             <!-- .rate -->
-            <div id="" class="rate">
+            <div id="bitcointoyou" class="rate">
                 <!-- .rate__cell -->
                 <div class="rate__cell">
                     <input value="1.00000000" type="text" class="btc-value rate__input" onClick="this.setSelectionRange(0, this.value.length)" />
@@ -70,9 +78,13 @@
 
         <!-- .main__cell -->
         <div class="main__cell">
-            <h2 class="main__title">FoxBit</h2>
+            <h2 class="main__title">
+                <!--input id="" name="" type="checkbox" /-->
+                FoxBit
+            </h2>
+
             <!-- .rate -->
-            <div id="" class="rate">
+            <div id="foxbit" class="rate">
                 <!-- .rate__cell -->
                 <div class="rate__cell">
                     <input value="1.00000000" type="text" class="btc-value rate__input" onClick="this.setSelectionRange(0, this.value.length)" />
@@ -99,9 +111,13 @@
 
         <!-- .main__cell -->
         <div class="main__cell">
-            <h2 class="main__title">MercadoBitcoin</h2>
+            <h2 class="main__title">
+                <!--input id="" name="" type="checkbox" /-->
+                LocalBitcoins
+            </h2>
+
             <!-- .rate -->
-            <div id="" class="rate">
+            <div id="localbitcoins" class="rate">
                 <!-- .rate__cell -->
                 <div class="rate__cell">
                     <input value="1.00000000" type="text" class="btc-value rate__input" onClick="this.setSelectionRange(0, this.value.length)" />
@@ -117,7 +133,7 @@
 
                 <!-- .rate__cell -->
                 <div class="rate__cell">
-                    <input value="<?php echo $MB; ?>" data-val="<?php echo $MB; ?>" type="text" class="brl-value rate__input" onClick="this.setSelectionRange(0, this.value.length)" />
+                    <input value="<?php echo $LB; ?>" data-val="<?php echo $LB; ?>" type="text" class="brl-value rate__input" onClick="this.setSelectionRange(0, this.value.length)" />
                     BRL
                 </div>
                 <!-- /.rate__cell -->
@@ -127,6 +143,12 @@
         <!-- /.main__cell -->
     </div>
     <!-- /.main -->
+
+    <!--p>
+    <label for="">
+        <input id="" name="" type="checkbox" /> Remover checagens
+    </label>
+    </p-->
 
     <p><strong>Patrocine esse Projeto:</strong> 1Pg3up9SJYhYTH68CmhqLxTdADjbPhJv8Z</p>
 </div>

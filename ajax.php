@@ -47,8 +47,12 @@ foreach ($lastVal as $val){
    $AVG = $AVG + $val;
 }
 
-$AVG = number_format($AVG / count($lastVal), 2);
-$LB = number_format($LB, 2);
-$BTY = number_format($BTY, 2);
-$FOX = number_format($FOX, 2);
+$json = array();
+
+$json["avg"] = number_format($AVG / count($lastVal), 2);
+$json["bty"] = number_format($BTY, 2);
+$json["fox"] = number_format($FOX, 2);
+$json["lb"] = number_format($LB, 2);
+
+echo json_encode($json);
 ?>
