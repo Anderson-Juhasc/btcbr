@@ -28,10 +28,6 @@ foreach ($APIs as $key) {
     $url = $key["url"];
 
     switch ($api) {
-        case 'localbitcoins':
-            $LB = json_decode(file_get_contents($url), true)["BRL"]["rates"]["last"];
-            $lastVal[] = $LB;
-            break;
         case 'bitcointoyou':
             $BTY = json_decode(file_get_contents($url), true)["ticker"]["last"];
             $lastVal[] = $BTY;

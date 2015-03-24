@@ -108,39 +108,6 @@
             <!-- /.rate -->
         </div>
         <!-- /.main__cell -->
-
-        <!-- .main__cell -->
-        <div class="main__cell">
-            <h2 class="main__title">
-                <!--input id="" name="" type="checkbox" /-->
-                LocalBitcoins
-            </h2>
-
-            <!-- .rate -->
-            <div id="localbitcoins" class="rate">
-                <!-- .rate__cell -->
-                <div class="rate__cell">
-                    <input value="1.00000000" type="text" class="btc-value rate__input" onClick="this.setSelectionRange(0, this.value.length)" />
-                    BTC
-                </div>
-                <!-- /.rate__cell -->
-
-                <!-- .rate__cell -->
-                <div class="rate__cell">
-                    =
-                </div>
-                <!-- /.rate__cell -->
-
-                <!-- .rate__cell -->
-                <div class="rate__cell">
-                    <input value="<?php echo $LB; ?>" data-val="<?php echo $LB; ?>" type="text" class="brl-value rate__input" onClick="this.setSelectionRange(0, this.value.length)" />
-                    BRL
-                </div>
-                <!-- /.rate__cell -->
-            </div>
-            <!-- /.rate -->
-        </div>
-        <!-- /.main__cell -->
     </div>
     <!-- /.main -->
 
