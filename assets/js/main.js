@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).on("ready", function() {
     $(".btc-value").on("keyup", function(e) {
         var result = ($(this).val()).replace(",", ".") * $(this).parents('.rate').find(".brl-value").data("val");
 
