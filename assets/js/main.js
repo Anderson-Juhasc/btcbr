@@ -1,14 +1,26 @@
 $(document).on("ready", function() {
     $(".btc-value").on("keyup", function(e) {
-        var result = ($(this).val()).replace(",", ".") * $(this).parents('.rate').find(".brl-value").data("val");
+        var btcValue = $(this).val();
+        var brlValue = $(this).parents('.rate').find(".brl-value").data("val");
+        var result = parseFloat(btcValue) * parseFloat(brlValue);
 
-        $(this).parents('.rate').find(".brl-value").val(result.toFixed(2));
+        if (isNaN(result)) {
+            $(this).parents('.rate').find(".brl-value").val("");
+        } else {
+            $(this).parents('.rate').find(".brl-value").val(result.toFixed(2));
+        }
     });
 
     $(".brl-value").on("keyup", function(e) {
-        var result = ($(this).val()).replace(",", ".") / $(this).data("val");
+        var brlValue = $(this).val();
+        var btcValue = $(this).data("val");
+        var result = parseFloat(brlValue) / parseFloat(btcValue);
 
-        $(this).parents('.rate').find(".btc-value").val(result.toFixed(8).trim(0));
+        if (isNaN(result)) {
+            $(this).parents('.rate').find(".btc-value").val("");
+        } else {
+            $(this).parents('.rate').find(".btc-value").val(result.toFixed(8).trim(0));
+        }
     });
 
 
