@@ -1,25 +1,30 @@
 $(document).on("ready", function() {
-    $(".btc-value").on("keyup", function(e) {
-        var btcValue = $(this).val();
-        var brlValue = $(this).parents('.rate').find(".brl-value").data("val");
+    //$("#btc-value").maskMoney({precision: 8});
+
+    $("#btc-value").on("keyup", function(e) {
+        var btcValue = (($(this).val()).replace(/\,/g, ""));
+        var brlValue = $("#brl-value").data("val");
         var result = parseFloat(btcValue) * parseFloat(brlValue);
 
         if (isNaN(result)) {
-            $(this).parents('.rate').find(".brl-value").val("");
+            $("#brl-value").val("");
         } else {
-            $(this).parents('.rate').find(".brl-value").val(result.toFixed(2));
+            $("#brl-value").val(result.toFixed(2)).currency({hidePrefix: true, region: "BRL", thousands: ".", decimal: ","});
         }
     });
 
-    $(".brl-value").on("keyup", function(e) {
-        var brlValue = $(this).val();
+    $("#brl-value").maskMoney({thousands:'.', decimal:',', affixesStay: false});
+
+    $("#brl-value").on("keyup", function(e) {
+        var brlValue = (($(this).val()).replace(/\./g, "")).replace(",", ".");
+        console.log(brlValue);
         var btcValue = $(this).data("val");
         var result = parseFloat(brlValue) / parseFloat(btcValue);
 
         if (isNaN(result)) {
-            $(this).parents('.rate').find(".btc-value").val("");
+            $("#btc-value").val("");
         } else {
-            $(this).parents('.rate').find(".btc-value").val(result.toFixed(8).trim(0));
+            $("#btc-value").val(result.toFixed(8).trim(0));
         }
     });
 

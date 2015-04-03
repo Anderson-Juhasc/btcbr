@@ -10,7 +10,7 @@
         <div id="average" class="rate">
             <!-- .rate-field -->
             <div class="rate-field">
-                <input value="1.00000000" type="text" class="rate-field__input btc-value" onClick="this.setSelectionRange(0, this.value.length)" />
+                <input value="1.00000000" id="btc-value" type="text" class="rate-field__input" />
                 <div class="rate-field__addon">
                     BTC
                 </div>
@@ -19,13 +19,13 @@
 
             <!-- .rate-divider -->
             <div class="rate-divider">
-                =
+                <i class="icon-loop"></i>
             </div>
             <!-- /.rate-divider -->
 
             <!-- .rate-field -->
             <div class="rate-field">
-                <input value="<?php echo $AVG; ?>" data-val="<?php echo $AVG; ?>" type="text" class="rate-field__input brl-value" onClick="this.setSelectionRange(0, this.value.length)" />
+                <input value="<?php echo str_replace(".", ",", $AVG); ?>" id="brl-value" data-val="<?php echo $AVG; ?>" type="text" class="rate-field__input" />
                 <div class="rate-field__addon">
                     BRL
                 </div>
