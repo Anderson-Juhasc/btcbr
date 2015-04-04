@@ -24,7 +24,7 @@ $(document).on("ready", function() {
         if (isNaN(result)) {
             $("#btc-value").val("");
         } else {
-            $("#btc-value").val(result.toFixed(8).trim(0));
+            $("#btc-value").val(result.toFixed(8));
         }
     });
 
