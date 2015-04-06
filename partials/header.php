@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<title>BTCBR</title>
+	<title>BTCBR - Bitcoin Conversor</title>
     <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
 
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">

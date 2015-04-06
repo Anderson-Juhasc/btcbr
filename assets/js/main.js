@@ -4,7 +4,7 @@ $(document).on("ready", function() {
     $("#btc-value").on("keyup", function(e) {
         var btcValue = (($(this).val()).replace(/\,/g, ""));
         var brlValue = $("#brl-value").data("val");
-        var result = parseFloat(btcValue) * parseFloat(brlValue);
+        var result = btcValue * brlValue;
 
         if (isNaN(result)) {
             $("#brl-value").val("");
@@ -19,7 +19,7 @@ $(document).on("ready", function() {
         var brlValue = (($(this).val()).replace(/\./g, "")).replace(",", ".");
         console.log(brlValue);
         var btcValue = $(this).data("val");
-        var result = parseFloat(brlValue) / parseFloat(btcValue);
+        var result = brlValue / btcValue;
 
         if (isNaN(result)) {
             $("#btc-value").val("");
