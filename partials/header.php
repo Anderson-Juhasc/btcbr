@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="keywords" content="conversor, converter, cotacao, bitcoin, valor, preco, custa, vale, btc, quotation">
+    <meta name="keywords" content="conversor, converter, cotacao, bitcoin, valor, preco, custa, vale, btc, quotation, btcbr">
 
 	<title>BTCBR - Bitcoin Conversor</title>
     <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
