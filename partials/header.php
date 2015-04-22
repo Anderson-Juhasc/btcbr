@@ -6,7 +6,7 @@
 
     <meta name="keywords" content="conversor, cotacao, bitcoin, valor, preco, custa, btcbr, btc, brl, btcbrl">
 
-	<title>BTCBR - Bitcoin Conversor</title>
+	<title>BTCBRL - Bitcoin Conversor</title>
     <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
 
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
@@ -21,7 +21,7 @@
             <div class="wrapper">
                 <!-- .head__logo -->
                 <a href="index.php" class="head__logo">
-                    <i class="icon-loop"></i> BTCBR
+                    <i class="icon-loop"></i> BTCBRL
                 </a>
                 <!-- /.head__logo -->
 
