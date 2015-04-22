@@ -8,7 +8,7 @@
         <div id="average" class="rate">
             <h1 class="rate__title">
                 <?php if ($source == "MEDIA") : ?>
-                    Média
+                    Média do Mercado
                 <?php elseif ($source == "B2U") : ?>
                     BitcoinToYou
                 <?php elseif ($source == "FOX") : ?>
