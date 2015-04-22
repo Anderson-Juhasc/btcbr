@@ -2,7 +2,6 @@
   background: #fff
   border-bottom: 1px solid #ccc
   box-shadow: 0 1px 6px rgba(#000, .1)
-  padding: 24px 0
   position: absolute
   left: 0
   top: 0
@@ -10,6 +9,7 @@
 
 .head-top
   +cf
+  padding: 24px 0
 
 .head__logo
   color: #555
@@ -27,10 +27,20 @@
   line-height: 1
 
 .head-collapse
+  +cf
+  border-top: 1px solid #eee
   display: none
-  +media-query(desk)
-    display: block
+  padding: 12px 0
 
 .head-nav
   list-style: none
   margin: 0
+
+.head-box
+  +media-query(lap)
+    display: inline-block
+    margin-right: 24px
+
+.head-box__title
+  font-size: 18px
+  margin-bottom: 0

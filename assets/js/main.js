@@ -1,5 +1,20 @@
 $(document).on("ready", function() {
-    //$("#btc-value").maskMoney({precision: 8});
+
+    $("#head-btn").on("click", function(e) {
+        var collapse = $(".head-collapse");
+
+        collapse.toggle();
+
+        e.preventDefault();
+    });
+
+    $("input[name=source]").on("click", function() {
+        if ($("input[name=source]:checked").val() !== "MEDIA") {
+            window.location = "index.php?fonte=" + $("input[name=source]:checked").val();
+        } else {
+            window.location = "index.php";
+        }
+    });
 
     $("#btc-value").on("keyup", function(e) {
         var btcValue = (($(this).val()).replace(/\,/g, ""));
@@ -17,7 +32,6 @@ $(document).on("ready", function() {
 
     $("#brl-value").on("keyup", function(e) {
         var brlValue = (($(this).val()).replace(/\./g, "")).replace(",", ".");
-        console.log(brlValue);
         var btcValue = $(this).data("val");
         var result = brlValue / btcValue;
 
