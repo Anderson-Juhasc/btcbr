@@ -1,12 +1,46 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="pt-br">
 <head>
+	<title>BTCBRL - Bitcoin Conversor</title>
+
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Meta Tags -->
+    <meta name="author" content="Anderson Juhasc" />
+    <meta name="description" content="" />
     <meta name="keywords" content="conversor, cotacao, bitcoin, valor, preco, custa, btcbr, btc, brl, btcbrl">
 
-	<title>BTCBRL - Bitcoin Conversor</title>
+    <!-- Dublin Core -->
+    <meta name="DC.Title" content="BTCBRL - Bitcoin Conversor">
+    <meta name="DC.Creator" content="Anderson Juhasc" />
+    <meta name="DC.Subject" content="Conversor Bitcoin para Real Brasileiro" />
+    <meta name="DC.Description" content="" />
+    <meta name="DC.Publisher" content="Anderson Juhasc" />
+    <meta name="DC.Contributor" content="Anderson Juhasc" />
+    <meta name="DC.Date" content="2015-04" />
+    <meta name="DC.Type" content="service" />
+    <meta name="DC.Format" content="text/html" />
+    <meta name="DC.Identifier" content="http://btcbrl.com.br/"/>
+    <meta name="DC.Source" content="https://github.com/Anderson-Juhasc/btcbr" />
+    <meta name="DC.Language" content="pt-BR" />
+    <meta name="DC.Relation" content="https://github.com/Anderson-Juhasc/btcbr" scheme="IsPartOf" />
+    <meta name="DC.Coverage" content="São Paulo, Brazil" />
+    <meta name="DC.Rights" content="Copyleft 2015, Anderson Juhasc. Nenhum direito reservado." />
+
+    <!-- Facebook -->
+    <meta property="og:title" content="BTCBRL - Bitcoin Conversor" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:description" content="" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="BTCBRL - Bitcoin Conversor" />
+    <meta name="twitter:description" content="" />
+    <meta name="twitter:image" content="" />
+
     <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
 
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
@@ -42,7 +76,7 @@
                 <?php
                     $source = "MEDIA";
 
-                    if ($_GET["fonte"]) {
+                    if (isset($_GET["fonte"])) {
                         $source = $_GET["fonte"];
                     }
 
@@ -81,6 +115,8 @@
                                     break;
                             }
                         }
+
+                        $AVG = 0;
 
                         foreach ($lastVal as $val){
                            $AVG = $AVG + $val;
