@@ -18,7 +18,7 @@
 
             <!-- .rate-field -->
             <div class="rate-field">
-                <input value="1.00000000" id="btc-value" type="text" class="rate-field__input" />
+                <input value="1.00000000" id="btc-value" type="number" class="rate-field__input" />
                 <div class="rate-field__addon">
                     BTC
                 </div>
@@ -33,7 +33,7 @@
 
             <!-- .rate-field -->
             <div class="rate-field">
-                <input value="<?php echo str_replace(".", ",", $QUOTA); ?>" id="brl-value" data-val="<?php echo $QUOTA; ?>" type="text" class="rate-field__input" />
+                <input value="<?php echo str_replace(",", "", $QUOTA); ?>" id="brl-value" data-val="<?php echo str_replace(",", "", $QUOTA); ?>" type="number" class="rate-field__input" />
                 <div class="rate-field__addon">
                     BRL
                 </div>
