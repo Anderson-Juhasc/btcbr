@@ -1,4 +1,4 @@
-'use strict';
+'use strict'
 
 require( 'angular' );
 require( 'angular-ui-router' );
@@ -21,7 +21,7 @@ var app = angular.module( "app", ['ui.router', 'angular-websocket', 'angular-loa
         $stateProvider
             .state('home', {
                 url: "/",
-                templateUrl: "/app/views/index.php",
+                templateUrl: "/app/views/index.html",
                 controller: "HomeCtrl"
             })
             .state('home.btc', {
@@ -34,7 +34,7 @@ var app = angular.module( "app", ['ui.router', 'angular-websocket', 'angular-loa
             })
             .state('foxbit', {
                 url: "/foxbit/",
-                templateUrl: "/app/views/index.php",
+                templateUrl: "/app/views/index.html",
                 controller: "FoxbitCtrl"
             })
             .state('foxbit.btc', {
@@ -47,7 +47,7 @@ var app = angular.module( "app", ['ui.router', 'angular-websocket', 'angular-loa
             })
             .state('mercadobitcoin', {
                 url: "/mercadobitcoin/",
-                templateUrl: "/app/views/index.php",
+                templateUrl: "/app/views/index.html",
                 controller: "MBCtrl"
             })
             .state('mercadobitcoin.btc', {
@@ -60,7 +60,7 @@ var app = angular.module( "app", ['ui.router', 'angular-websocket', 'angular-loa
             })
             .state('bitcointoyou', {
                 url: "/bitcointoyou/",
-                templateUrl: "/app/views/index.php",
+                templateUrl: "/app/views/index.html",
                 controller: "B2YCtrl"
             })
             .state('bitcointoyou.btc', {
@@ -73,7 +73,7 @@ var app = angular.module( "app", ['ui.router', 'angular-websocket', 'angular-loa
             })
             .state('flowbtc', {
                 url: "/flowbtc/",
-                templateUrl: "/app/views/index.php",
+                templateUrl: "/app/views/index.html",
                 controller: "FlowBtcCtrl"
             })
             .state('flowbtc.btc', {
@@ -86,7 +86,7 @@ var app = angular.module( "app", ['ui.router', 'angular-websocket', 'angular-loa
             })
             .state('negociecoins', {
                 url: "/negociecoins/",
-                templateUrl: "/app/views/index.php",
+                templateUrl: "/app/views/index.html",
                 controller: "NegocieCoinsCtrl"
             })
             .state('negociecoins.btc', {
@@ -103,6 +103,7 @@ var app = angular.module( "app", ['ui.router', 'angular-websocket', 'angular-loa
 
     .controller("HomeCtrl", function($scope, $state, $http, $interval, cfpLoadingBar) {
         console.log('BitValor');
+        $scope.title = 'BitValor';
         $scope.ticker = {};
         $scope.btc = 1;
         if ($state.params.brl > 0) {
@@ -152,20 +153,18 @@ var app = angular.module( "app", ['ui.router', 'angular-websocket', 'angular-loa
           cfpLoadingBar.complete();
         }
 
-        $scope.fakeIntro = true;
         $scope.start();
 
         var promise = $interval(function() {
             $http({
                 method: 'GET',
-                url: '/api/bitvalor.php',
+                url: 'http://api.bitvalor.com/v1/ticker.json',
                 ignoreLoadingBar: true
             }).then(function(ticker) {
                 console.log(ticker.data);
                 $scope.ticker.data = ticker.data;
 
                 $scope.complete();
-                $scope.fakeIntro = false;
 
                 $scope.changeBRL(false);
                 $scope.changeBTC(false);
@@ -179,6 +178,7 @@ var app = angular.module( "app", ['ui.router', 'angular-websocket', 'angular-loa
 
     .controller("FoxbitCtrl", function($scope, $state, $http, $interval, cfpLoadingBar) {
         console.log('FoxBit');
+        $scope.title = 'FoxBit';
         $scope.ticker = {};
         $scope.btc = 1;
         if ($state.params.brl > 0) {
@@ -228,7 +228,6 @@ var app = angular.module( "app", ['ui.router', 'angular-websocket', 'angular-loa
           cfpLoadingBar.complete();
         }
 
-        $scope.fakeIntro = true;
         $scope.start();
 
         var promise = $interval(function() {
@@ -241,7 +240,6 @@ var app = angular.module( "app", ['ui.router', 'angular-websocket', 'angular-loa
                 $scope.ticker.data = ticker.data;
 
                 $scope.complete();
-                $scope.fakeIntro = false;
 
                 $scope.changeBRL(false);
                 $scope.changeBTC(false);
@@ -255,6 +253,7 @@ var app = angular.module( "app", ['ui.router', 'angular-websocket', 'angular-loa
 
     .controller("MBCtrl", function($scope, $state, $http, $interval, cfpLoadingBar) {
         console.log('MercadoBitcoin');
+        $scope.title = 'MercadoBitcoin';
         $scope.ticker = {};
         $scope.btc = 1;
         if ($state.params.brl > 0) {
@@ -304,7 +303,6 @@ var app = angular.module( "app", ['ui.router', 'angular-websocket', 'angular-loa
           cfpLoadingBar.complete();
         }
 
-        $scope.fakeIntro = true;
         $scope.start();
 
         var promise = $interval(function() {
@@ -317,7 +315,6 @@ var app = angular.module( "app", ['ui.router', 'angular-websocket', 'angular-loa
                 $scope.ticker.data = ticker.data;
 
                 $scope.complete();
-                $scope.fakeIntro = false;
 
                 $scope.changeBRL(false);
                 $scope.changeBTC(false);
@@ -331,6 +328,7 @@ var app = angular.module( "app", ['ui.router', 'angular-websocket', 'angular-loa
 
     .controller("B2YCtrl", function($scope, $state, $http, $interval, cfpLoadingBar) {
         console.log('BitcoinToYou');
+        $scope.title = 'BitcoinToYou';
         $scope.ticker = {};
         $scope.btc = 1;
         if ($state.params.brl > 0) {
@@ -380,7 +378,6 @@ var app = angular.module( "app", ['ui.router', 'angular-websocket', 'angular-loa
           cfpLoadingBar.complete();
         }
 
-        $scope.fakeIntro = true;
         $scope.start();
 
         var promise = $interval(function() {
@@ -393,7 +390,6 @@ var app = angular.module( "app", ['ui.router', 'angular-websocket', 'angular-loa
                 $scope.ticker.data = ticker.data;
 
                 $scope.complete();
-                $scope.fakeIntro = false;
 
                 $scope.changeBRL(false);
                 $scope.changeBTC(false);
@@ -407,6 +403,7 @@ var app = angular.module( "app", ['ui.router', 'angular-websocket', 'angular-loa
 
     .controller("FlowBtcCtrl", function($scope, $state, $location, $websocket, cfpLoadingBar) {
         console.log('FlowBtc');
+        $scope.title = 'FlowBtc';
         $scope.ticker = {};
         $scope.btc = 1;
         if ($state.params.brl > 0) {
@@ -456,7 +453,6 @@ var app = angular.module( "app", ['ui.router', 'angular-websocket', 'angular-loa
           cfpLoadingBar.complete();
         }
 
-        $scope.fakeIntro = true;
         $scope.start();
 
         var ws = $websocket('wss://api.flowbtc.com:8401/v1/GetTicker/');
@@ -474,7 +470,6 @@ var app = angular.module( "app", ['ui.router', 'angular-websocket', 'angular-loa
               $scope.ticker.data = data;
 
               $scope.complete();
-              $scope.fakeIntro = false;
 
               $scope.changeBRL(false);
               $scope.changeBTC(false);
@@ -488,6 +483,7 @@ var app = angular.module( "app", ['ui.router', 'angular-websocket', 'angular-loa
 
     .controller("NegocieCoinsCtrl", function($scope, $state, $http, $interval, cfpLoadingBar) {
         console.log('NegocieCoins');
+        $scope.title = 'NegocieCoins';
         $scope.ticker = {};
         $scope.btc = 1;
         if ($state.params.brl > 0) {
@@ -537,7 +533,6 @@ var app = angular.module( "app", ['ui.router', 'angular-websocket', 'angular-loa
           cfpLoadingBar.complete();
         }
 
-        $scope.fakeIntro = true;
         $scope.start();
 
         var promise = $interval(function() {
@@ -550,7 +545,6 @@ var app = angular.module( "app", ['ui.router', 'angular-websocket', 'angular-loa
                 $scope.ticker.data = ticker.data;
 
                 $scope.complete();
-                $scope.fakeIntro = false;
 
                 $scope.changeBRL(false);
                 $scope.changeBTC(false);
