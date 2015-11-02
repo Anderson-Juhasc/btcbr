@@ -158,7 +158,7 @@ var app = angular.module( "app", ['ui.router', 'angular-websocket', 'angular-loa
         var promise = $interval(function() {
             $http({
                 method: 'GET',
-                url: 'http://api.bitvalor.com/v1/ticker.json',
+                url: '/api/bitvalor.php',
                 ignoreLoadingBar: true
             }).then(function(ticker) {
                 console.log(ticker.data);
