@@ -402,8 +402,8 @@ var app = angular.module( "app", ['ui.router', 'angular-websocket', 'angular-loa
     })
 
     .controller("FlowBtcCtrl", function($scope, $state, $location, $websocket, cfpLoadingBar) {
-        console.log('FlowBtc');
-        $scope.title = 'FlowBtc';
+        console.log('FlowBTC');
+        $scope.title = 'FlowBTC';
         $scope.ticker = {};
         $scope.btc = 1;
         if ($state.params.brl > 0) {
