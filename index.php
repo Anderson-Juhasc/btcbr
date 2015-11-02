@@ -132,27 +132,6 @@
     <div class="main" ui-view></div>
     <!-- /.main -->
 
-    <!-- .foot -->
-    <footer class="foot">
-        <!-- .foot-nav -->
-        <ul class="foot-nav">
-            <li>
-                <iframe src="http://platform.twitter.com/widgets/tweet_button.1359159993.html#_=1360010161235&amp;count=horizontal&amp;id=twitter-widget-0&amp;lang=pt-BR&amp;size=m&amp;url=http://btcbrl.info" class="twitter-share-button twitter-count-horizontal" data-twttr-rendered="true" allowtransparency="true" frameborder="0" scrolling="no" width="82" height="20"></iframe>
-            </li>
-            <li>
-                <iframe src="//www.facebook.com/plugins/like.php?href=http://btcbrl.info/&amp;send=false&amp;layout=button_count&amp;width=100&amp;show_faces=false&amp;colorscheme=light&amp;action=like&amp;height=20" allowtransparency="true" frameborder="0" scrolling="no" width="78" height="20"></iframe>
-            </li>
-            <li>
-                <div class="g-plusone" data-size="medium" data-href="http://btcbrl.info/" data-href="http://btcbrl.info/"></div>
-            </li>
-            <li>
-                <iframe src="http://ghbtns.com/github-btn.html?user=anderson-juhasc&amp;repo=btcbr&amp;type=watch&amp;count=true&amp;size=small" allowtransparency="true" frameborder="0" scrolling="0" width="85" height="20"></iframe>
-            </li>
-        </ul>
-        <!-- /.foot-nav -->
-    </footer>
-    <!-- /.foot -->
-
     <script src="/app/bundle/app.js"></script>
 </body>
 </html>

@@ -22,7 +22,7 @@ gulp.task('browser-sync',['connect'], function() {
 });
 
 gulp.task('sass', function () {
-  gulp.src('./assets/sass/**/*.sass')
+  gulp.src('./assets/sass/**/*.{sass,scss}')
     .pipe(sass.sync().on('error', sass.logError))
     .pipe(gulp.dest('./assets/css'));
 });

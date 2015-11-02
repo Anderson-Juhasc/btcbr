@@ -442,6 +442,58 @@ a {
 .icon-github4:before {
   content: "\eab4"; }
 
+.custom-tweet-button a,
+.custom-follow-button a {
+  position: relative;
+  display: inline-block;
+  padding: 3px 3px 3px 6px;
+  border: 1px solid #ccc;
+  font-size: 11px;
+  color: #333;
+  text-decoration: none;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  font-weight: bold;
+  background-color: #F8F8F8;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#FFF), to(#DEDEDE));
+  background-image: -moz-linear-gradient(top, #FFF, #DEDEDE);
+  background-image: -o-linear-gradient(top, #FFF, #DEDEDE);
+  background-image: -ms-linear-gradient(top, #FFF, #DEDEDE);
+  border: #CCC solid 1px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  cursor: pointer;
+  overflow: hidden; }
+
+.custom-tweet-button a:hover,
+.custom-follow-button a:hover {
+  border-color: #BBB;
+  background-color: #F8F8F8;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#F8F8F8), to(#D9D9D9));
+  background-image: -moz-linear-gradient(top, #F8F8F8, #D9D9D9);
+  background-image: -o-linear-gradient(top, #F8F8F8, #D9D9D9);
+  background-image: -ms-linear-gradient(top, #F8F8F8, #D9D9D9);
+  background-image: linear-gradient(top, #F8F8F8, #D9D9D9);
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none; }
+
+.custom-tweet-button a .btn-icon,
+.custom-follow-button a .btn-icon {
+  position: absolute;
+  width: 16px;
+  height: 13px;
+  top: 50%;
+  left: 3px;
+  margin-top: -6px;
+  background: url("https://twitter.com/favicons/favicon.ico") 1px center no-repeat;
+  background-size: 13px; }
+
+.custom-tweet-button a .btn-text,
+.custom-follow-button a .btn-text {
+  display: inline-block;
+  padding: 2px 3px 0 20px; }
+
 .head {
   background: #fff;
   border-bottom: 1px solid #ccc;
@@ -574,7 +626,8 @@ a {
   margin: 0; }
   .foot-nav > li {
     display: inline-block;
-    padding: 0 6px; }
+    padding: 0 6px;
+    vertical-align: middle; }
     .foot-nav > li > a {
       color: #555;
       display: block; }
