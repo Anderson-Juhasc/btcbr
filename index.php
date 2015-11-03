@@ -128,9 +128,7 @@
     </header>
     <!-- /.head -->
 
-    <!-- .main -->
-    <div class="main" ui-view></div>
-    <!-- /.main -->
+    <div style="height:100%;" ui-view></div>
 
     <script src="/app/bundle/app.js"></script>
 </body>
