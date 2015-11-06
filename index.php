@@ -49,7 +49,7 @@
 </head>
 <body>
     <!-- .head -->
-    <header class="head">
+    <header class="head" ng-controller="CollapseCtrl">
         <!-- .head-top -->
         <div class="head-top">
             <!-- .wrapper -->
@@ -61,7 +61,7 @@
                 <!-- /.head__logo -->
 
                 <!-- .head-btn -->
-                <a href="" id="head-btn" class="head-btn">
+                <a href="" ng-click="isCollapsed = !isCollapsed" class="head-btn">
                     <i class="icon-cog"></i>
                 </a>
                 <!-- /.head-btn -->
@@ -71,7 +71,7 @@
         <!-- /.head-top -->
 
         <!-- .head-collapse -->
-        <div class="head-collapse">
+        <div class="head-collapse" ng-hide="isCollapsed">
             <!-- .wrapper -->
             <div class="wrapper">
                 <!-- .head-box -->

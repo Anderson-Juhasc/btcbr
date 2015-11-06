@@ -554,4 +554,9 @@ var app = angular.module( "app", ['ui.router', 'angular-websocket', 'angular-loa
         $scope.$on('$destroy', function() {
             $interval.cancel(promise);
         });
+    })
+
+    .controller('CollapseCtrl', function ($scope) {
+      $scope.isCollapsed = true;
     });
+
